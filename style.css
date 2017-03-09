@@ -1,0 +1,68 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url('media/woodbar2.jpg');
+  background-size: 100%;
+}
+
+
+.dealer-layer {
+  font-family: 'Titillium Web', sans-serif;
+  margin-top: 6%;
+  margin-left: 17%;
+  font-weight: bolder;
+  text-shadow: -2px 0 #000000,0 2px #000000,2px 0 #000000,0 -2px #000000;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+
+.buttons {
+  text-align: center;
+  margin-top: 3%;
+
+}
+
+#titlecards  {
+  float: right;
+  margin-right: 3%;
+
+}
+
+.hand {
+  background-color: rgba(255,255,255,0.2);
+  width: 70vw;
+  height: 10vw;
+
+
+}
+#table{
+  /*text-align: center;*/
+}
+#messages{
+  font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  margin-left: 35vw;
+  color: white;
+  height: 50px;
+  width: 400px;
+  font-size: 4em;
+  margin-top: 5%;
+  text-shadow: -2px 0 #000000,0 2px #000000,2px 0 #000000,0 -2px #000000;
+
+
+}
+#dealer-hand{
+  margin-bottom: 5%;
+}
+.card{
+  height:100%;
+}
+.button{
+  height: 100px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 40px;
+}
