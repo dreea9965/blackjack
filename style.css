@@ -4,8 +4,10 @@
 }
 
 body{
-  background-image: url('media/woodbar2.jpg');
+  background-image: url('media/cloud.jpg');
   background-size: 100%;
+  background-repeat:no-repeat;
+  background-color: #8ED4D6;
 }
 
 
@@ -65,4 +67,15 @@ body{
   height: 100px;
   background-color: rgba(255,255,255,0.5);
   border-radius: 40px;
+}
+
+@media (max-width: 321px) {
+
+  body{
+    background-image: url('media/cloudmobile.jpg');
+    background-size: 100%;
+    background-repeat:no-repeat;
+  }
+
+
 }

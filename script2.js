@@ -7,12 +7,15 @@ $(document).ready(function () {
   var dealerScore = 0;
   var pturn = true;
 
-  draw();
+  player1.draw();
    $('#reset-button').hide();
+
+   player2.draw();
+    $('#reset-button').hide();
 
   $('.buttons').on('touchstart click','#deal-button', function(e){
     if(dealt === false){
-    initialDeal();
+    Hand.initialDeal();
     dealt = true;
     }
     scoring();
@@ -45,72 +48,73 @@ $(document).ready(function () {
   //
   // });
 
-  function dealerTurn(){
-    while (dealerScore < 17 ) {
-      dealCards(dealerHand);
-      scoring();
-      draw();
-    }
+  // function dealerTurn(){
+  //   while (dealerScore < 17 ) {
+  //     dealCards(dealerHand);
+  //     scoring();
+  //     draw();
+  //   }
+  //
+  //   if ( playerScore < 21) {
+  //     while(dealerScore < playerScore) {
+  //       dealCards(dealerHand);
+  //       scoring();
+  //       draw();
+  //     }
+  //   }
+  //   scoring();
+  //   winner();
+  //   draw();
+  //
+  // }
 
-    if ( playerScore < 21) {
-      while(dealerScore < playerScore) {
-        dealCards(dealerHand);
-        scoring();
-        draw();
-      }
-    }
-    scoring();
-    winner();
-    draw();
+  // function calculatePoints(cards){
+  //   var total = 0;
+  //   var ace = 0;
+  //   cards.forEach(function(e){
+  //     if (e.point > 10 ) {
+  //       e.point = 10;
+  //     }
+  //     else if (e.point === 1) {
+  //       ace++;
+  //       e.point = 11;
+  //     }
+  //     total += e.point;
+  //   });
+  //   for (var i = 0; i < ace; i++) {
+  //     if (total > 21) {
+  //       total -= 10;
+  //     }
+  //   }
+  //   return total;
+  // }
 
-  }
+  // function newDeck(deck){
+  //   var d = [];
+  //
+  //   for(var num = 1; num<=13; num++){
+  //     for(var s = 0; s<4; s++){
+  //      var x = '';
+  //       switch(s){
+  //         case 0:
+  //           x='spades';
+  //           break;
+  //         case 1:
+  //           x='hearts';
+  //           break;
+  //         case 2:
+  //           x='clubs';
+  //           break;
+  //         case 3:
+  //           x='diamonds';
+  //           break;
+  //       }
+  //       d.push({point: num, suit: x});
+  //     }
+  //   }
+  //   return d;
+  // }
 
-  function calculatePoints(cards){
-    var total = 0;
-    var ace = 0;
-    cards.forEach(function(e){
-      if (e.point > 10 ) {
-        e.point = 10;
-      }
-      else if (e.point === 1) {
-        ace++;
-        e.point = 11;
-      }
-      total += e.point;
-    });
-    for (var i = 0; i < ace; i++) {
-      if (total > 21) {
-        total -= 10;
-      }
-    }
-    return total;
-  }
-
-  function newDeck(deck){
-    var d = [];
-
-    for(var num = 1; num<=13; num++){
-      for(var s = 0; s<4; s++){
-       var x = '';
-        switch(s){
-          case 0:
-            x='spades';
-            break;
-          case 1:
-            x='hearts';
-            break;
-          case 2:
-            x='clubs';
-            break;
-          case 3:
-            x='diamonds';
-            break;
-        }
-        d.push({point: num, suit: x});
-      }
-    }
-    return d;
-  }
   //
   // function scoring(){
   //   console.log(playerHand);
@@ -146,7 +150,7 @@ function scoring(){
         $('#dealer-hand').append('<img class =\'card\'src=./cards/' + dealerHand[n].point + '_' + dealerHand[n].suit + '.png>');
       }
     }
-    
+
     $('#player-points').text(playerScore);
   console.log('test');
   console.log(pturn);
@@ -156,12 +160,12 @@ function scoring(){
     }
   }
 
-  function initialDeal(){
-    for (var i = 0; i<2; i++){
-      dealCards(playerHand);
-      dealCards(dealerHand);
-    }
-  }
+  // function initialDeal(){
+  //   for (var i = 0; i<2; i++){
+  //     dealCards(playerHand);
+  //     dealCards(dealerHand);
+  //   }
+  // }
 
 
   function dealCards(player){
