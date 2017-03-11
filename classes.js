@@ -1,13 +1,29 @@
 
-var playerHand = [];
-var dealerHand =[];
-var dealt = false;
-var playerScore = 0;
-var dealerScore = 0;
-var pturn = true;
+$(document).ready(function () {
+  var playerHand = [];
+  var dealerHand =[];
+  var deck = newDeck();
+  var dealt = false;
+  var playerScore = 0;
+  var dealerScore = 0;
+  var pturn = true;
 
 
-var deck = new Deck();
+
+function Player(){
+  this.hand = 0;
+  this.bet = 0;
+  this.cash = 1000;
+  this.bank = 0;
+  this.score = '';
+
+}
+
+function Dealer(){
+  this.hand = 0;
+  this.score = '';
+
+}
 
 
 function Card(point, suit) {
@@ -85,6 +101,11 @@ Hand.prototype.dealerTurn = function(){
 
 };
 
+Hand.prototype.scoring = function(){
+  playerScore = calculatePoints(playerHand);
+  dealerScore = calculatePoints(dealerHand);
+};
+
 function Deck() {
   this.cards = [];
   for (var i = 1; i <= 13; i++) {
@@ -98,6 +119,28 @@ function Deck() {
 Deck.prototype.draw = function() {
   var card = this.cards.pop();
   return card;
+
+
+//   $('#dealer-hand').children().remove();
+//   $('#player-hand').children().remove();
+//
+//   for(var n=0; n < playerHand.length; n++){
+//
+//     $('#player-hand').append('<img class =\'card\'src=./cards/' + playerHand[n].point + '_' + playerHand[n].suit + '.png>');
+//   }
+//
+//   for(var n=0; n < dealerHand.length; n++){
+//
+//     if (n === 0 && pturn === true){
+//       var back = Math.floor((Math.random() * 9) +1);
+//       console.log('<img class =\'card\'src=./cards/back' + back+'.png>');
+//       $('#dealer-hand').append('<img class =\'card\'src=./cards/back' + back+'.png>');
+//     }
+//     else{
+//       console.log('<img class =\'card\'src=./cards/' + dealerHand[n].point + '_' + dealerHand[n].suit + '.png>');
+//       $('#dealer-hand').append('<img class =\'card\'src=./cards/' + dealerHand[n].point + '_' + dealerHand[n].suit + '.png>');
+//     }
+//   }
 };
 
 Deck.prototype.numCardsLeft = function() {
@@ -115,5 +158,10 @@ Deck.prototype.shuffle = function() {
   }
 };
 
-var player1 = new Hand();
-var player2 = new Hand();
+// var playerHand = new Hand();
+// var dealerHand = new Hand();
+
+var player1 = Player();
+var dealer = Dealer();
+
+});
