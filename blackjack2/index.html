@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blackjack</title>
+
+
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+
+
+
+    <script src="./script3.js"></script>
+
+    <!-- <script src="classes2.js"></script> -->
+
+
+
+  </head>
+  <body>
+    <div id="table">
+
+      <div id="messages">Black Jack </div>
+      <img src="./media/cardlogo4.png" id="titlecards">
+      <!-- <img src="./media/tree2.png" id="tree"> -->
+
+      <div class="bet-buttons">
+      <img class="button" id="10-button" src="./media/dealbutton.png" alt="">
+      <br>
+      <img class="button" id="20-button" src="./media/hitbutton.png" alt="">
+      <br>
+      <img class="button" id="50-button" src="./media/stand-button.png" alt="">
+      <br>
+         <!-- onclick="window.location.reload() -->
+      <img class="button" id="100-button" src="./media/reset.png" onclick="window.location.reload()" alt="">
+      </div>
+
+      <div class="dealer-layer">
+        <label>Dealer: </label>
+        <label id="dealer-points" class="points"></label>
+        <div id="dealer-hand" class="hand"></div>
+        <label>Player: </label>
+        <label id="player-points" class="points"></label>
+        <div id="player-hand" class="hand"></div>
+      </div>
+
+      <div class="buttons">
+
+      <img class="button" id="deal-button" src="./media/dealbutton.png" alt="">
+      <img class="button" id="hit-button" src="./media/hitbutton.png" alt="">
+      <img class="button" id="stand-button" src="./media/stand-button.png" alt="">
+         <!-- onclick="window.location.reload() -->
+      <img class="button" id="reset-button" src="./media/reset.png" onclick="window.location.reload()" alt="">
+      </div>
+
+    </div>
+  </body>
+</html>
