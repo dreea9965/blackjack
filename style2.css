@@ -1,0 +1,187 @@
+
+*{
+  box-sizing: border-box;
+}
+
+/*#table {
+  border: 2px solid white;
+}*/
+
+body{
+  background-image: url('media/cloud2.jpg');
+  background-size: 100%;
+  background-repeat:no-repeat;
+  background-color: #8ED4D6;
+
+}
+
+.message-box {
+  position:absolute;
+  top: 43%;
+  left: 5%;
+  height: 35vh;
+  width: 20vw;
+  border: 2px solid white;
+  color: black;
+  /*margin-left: 5vw;
+  margin-top: 40vh;*/
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.3em;
+  background-color: rgba(255,255,255,0.5);
+
+
+}
+
+.message-box .instructions {
+  font-weight: bolder;
+  display: inline;
+  line-height: 35px;
+
+
+
+
+}
+
+#bet {
+  border: 1px solid white;
+}
+
+.message-box .button {
+  height: 50px;
+  width: 50px;
+}
+
+.dealer-layer {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2em;
+  margin-top: 6%;
+  margin-left: 30%;
+  font-weight: bolder;
+  text-shadow: -2px 0 #000000,0 3px #000000,3px 0 #000000,0 -2px #000000;
+  color: white;
+  letter-spacing: 1.5px;
+
+}
+
+
+.buttons {
+  /*text-align: center;*/
+  margin-top: 3%;
+  margin-left: 42%;
+
+
+/*.button{
+  height: 100px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 40px;
+}*/
+
+
+}
+
+.buttons .button {
+  /*text-align: center;*/
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 40px;
+
+
+}
+
+.buttons .button:hover
+ { outline: dotted white;
+ }
+
+ .message-box img .button {
+   position: absolute;
+   margin-left: 25%;
+   margin-top: 8%;
+
+ }
+
+/*.message-box .button{
+  text-align: center;
+  width: 80px;
+  height: 80px;
+}*/
+
+.message-box .button:hover
+ { outline: dotted white;
+ }
+
+#titlecards  {
+  float: right;
+  margin-right: 2%;
+  height: auto;
+
+}
+
+#tree {
+  position: absolute;
+  opacity: 0.4;
+}
+
+#cutecloud {
+  position: absolute;
+  top: 1%;
+
+}
+
+.hand {
+  background-color: rgba(255,255,255,.5);
+  width: 50vw;
+  height: auto;
+  text-align; center;
+}
+
+#table{
+  /*text-align: center;*/
+}
+
+#messages{
+  /*font-family: 'Titillium Web', sans-serif;*/
+  font-family: 'Amatic SC', cursive;
+
+  margin-left: 41vw;
+  color: white;
+  height: 50px;
+  width: 400px;
+  font-size: 5em;
+  margin-top: 5%;
+  text-shadow: -2px 0 #000000,0 4px #000000,4px 0 #000000,0 -2px #000000;
+  letter-spacing: 1.8px;
+
+}
+
+
+
+#dealer-hand{
+  width: 50vw;
+  height: 17vh;
+  margin-bottom: 5%;
+}
+
+
+#player-hand{
+  width: 50vw;
+  height: 17vh;
+  margin-bottom: 5%;
+}
+
+.card{
+  height: auto;
+}
+
+
+@media (max-width: 321px) {
+
+  body{
+    background-image: url('media/cloudmobile.jpg');
+    background-size: 100%;
+    background-repeat:no-repeat;
+  }
+
+
+}

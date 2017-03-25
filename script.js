@@ -10,7 +10,7 @@ $(document).ready(function () {
   draw();
    $('#reset-button').hide();
 
-  $('.buttons').on('touchstart click','#deal-button', function(e){
+  $('.buttons').on('click','#deal-button', function(e){
     if(dealt === false){
     initialDeal();
     dealt = true;
@@ -19,14 +19,13 @@ $(document).ready(function () {
     draw();
   });
 
-  $('.buttons').on('touchstart click','#hit-button', function(e){
+  $('.buttons').on('click','#hit-button', function(e){
     if (playerScore < 21) {
       dealCards(playerHand);
       scoring();
       draw();
       draw();
     }
-
     if (playerScore > 21){
       $('#messages').text('You Dead!');
       $('#reset-button').show();
@@ -34,10 +33,11 @@ $(document).ready(function () {
     }
   });
 
-  $('.buttons').on('touchstart click','#stand-button', function(e){
+  $('.buttons').on('click','#stand-button', function(e){
     if (pturn === true){
       pturn = false;
       dealerTurn();
+
     }
   });
 
@@ -50,6 +50,7 @@ $(document).ready(function () {
       dealCards(dealerHand);
       scoring();
       draw();
+
     }
 
     if ( playerScore < 21) {
@@ -146,7 +147,6 @@ function scoring(){
         $('#dealer-hand').append('<img class =\'card\'src=./cards/' + dealerHand[n].point + '_' + dealerHand[n].suit + '.png>');
       }
     }
-    
     $('#player-points').text(playerScore);
   console.log('test');
   console.log(pturn);
@@ -178,7 +178,6 @@ function scoring(){
        $('#reset-button').show();
       $('body').css('background-image','url(./media/fireworks.gif)')
     }
-
     else if(playerScore > 21 && dealerScore > 21 || playerScore == dealerScore){
       $('#messages').text('DRAW!');
        $('#reset-button').show();
@@ -189,6 +188,7 @@ function scoring(){
     }
 
   }
+
 
 
 

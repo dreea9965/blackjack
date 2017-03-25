@@ -2,28 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Blackjack</title>
-
-
     <script src="jquery.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
-    <script src="./script3.js"></script>
-
-    <!-- <script src="classes2.js"></script> -->
-
-
-
+    <script src="./script.js"></script>
   </head>
   <body>
     <div id="table">
-      <img src="./media/21.png" id="titlecards">
+      <img src="./media/cardlogo4.png" id="titlecards">
 
       <div id="messages">Black Jack </div>
+
+      <div class="message-box">
+        <h4 class= "instructions"> <u> Instructions </u> </h4>
+        <br>
+        <p class= "instructions"> To play blackjack, google "instructions
+          on how to play blackjack.""  </p>
+
+
+        <p id="bet"> <strong> Bet </strong> </p>
+        <img class="button" id="10-button" src="./media/10chip.png" alt="">
+        <img class="button" id="20-button" src="./media/20chip.png" alt="">
+        <img class="button" id="50-button" src="./media/50chip.png" alt="">
+        <img class="button" id="100-button" src="./media/100chip.png" onclick="window.location.reload()" alt="">
+
+      </div>
+
       <div class="dealer-layer">
         <label>Dealer: </label>
         <label id="dealer-points" class="points"></label>
